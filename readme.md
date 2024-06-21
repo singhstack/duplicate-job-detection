@@ -6,6 +6,7 @@ This project demonstrates a scalable approach to detect duplicate job postings u
 
 ### Directory Structure
 '''bash
+$ tree
 jobduplicates/
 │
 ├── data/                  <!-- Placeholder for input data CSV file -->
