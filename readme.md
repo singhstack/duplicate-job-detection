@@ -67,11 +67,10 @@ Duplicate jobs are defined as postings sharing identical attributes in key field
    cd jobduplicates
 
 2. **Run Docker compose using start.sh:**
-  ```bash
+   bash
    bash start.sh
 
 This will build your docker, run it and generate duplicate job pairs for you in /embeddings as 'duplicate job pairs.csv'
-
 
 
 ### Identifying Optimal threshold
@@ -103,10 +102,10 @@ This will build your docker, run it and generate duplicate job pairs for you in 
 - F1-score was selected due to its ability to balance precision and recall, ensuring effective identification of duplicates while minimizing false positives.
 
 By systematically evaluating these metrics across various threshold values, we established an efficient approach to detect duplicate job postings using Milvus.
-'''
 
 
-# Responses to Questions:
+
+## Responses to Questions:
 
 ### Part 1
 
