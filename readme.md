@@ -72,6 +72,8 @@ Duplicate jobs are defined as postings sharing identical attributes in key field
 
 This will build your docker, run it and generate duplicate job pairs for you in /embeddings as 'duplicate job pairs.csv'
 
+### Demo Video Comments (Post email comments)
+In the demo video, during live code run (demonstration) , you will notice that once the data is inserted into milvus, the code waits for a while. In that time, data-ingestion is actually transfering the preprocessed data (from @app.post("/search_csv")) to the duplicate search method - @embedding_app.post("/search") to conduct a duplicate search. This transfer when complete, triggers the duplicate search method. **However, this can be achieved in a much more time and memory efficient manner** by letting embedding service employ the already processed and vectorized dataset it used for data insertion for duplicate detection.
 
 ### Identifying Optimal threshold
 
@@ -130,7 +132,7 @@ Response: The threshold of 0.95 similarity gave the us a precision of 0.000120, 
 
 Question 5: How did you decide on the threshold for determining duplicates in Milvus? Which metrics are you using?
 Response: Threshold Determination for Duplicates in Milvus
-##### Methodology:
+#### Methodology:
 1. **Similarity Matrix**: Generated a similarity matrix for a subset of job postings using embedding vectors.
 2. **Key Generation**: Created unique keys for job postings by hashing job descriptions and concatenating selected features.
 3. **Threshold Evaluation**: Evaluated potential thresholds (0 to 1) by classifying pairs with similarity scores above the threshold as duplicates.
@@ -177,27 +179,27 @@ In designing a system for real-time duplicate job detection, several critical co
 - **Integration with Embedding Service:** Integrate with an embedding generation service capable of generating embeddings for job postings in real-time.
 - **Efficient Embedding Models:** Utilize efficient embedding models, such as pre-trained GloVe embeddings. Consideration should also be given to updating embeddings dynamically based on continuous learning or fine-tuning processes.
 
-##### 4. Duplicate Detection
+#### 4. Duplicate Detection
 
 - **Utilization of Vector Search Engine:** Employ a vector search engine like Milvus for efficient similarity search operations in real-time.
 - **Duplicate Detection Logic:** Implement duplicate detection logic using similarity thresholds derived from embeddings and feature-based keys generated during preprocessing.
 
-##### 5. Scalability and Performance
+#### 5. Scalability and Performance
 
 - **Distributed Processing:** Ensure scalability by deploying components across distributed environments.
 - **Load Balancing:** Use load balancers to evenly distribute incoming data streams across processing nodes, optimizing resource utilization.
 - **Performance Monitoring:** Implement robust monitoring and logging mechanisms to track processing times, throughput, and system health metrics.
 
-##### 6. Deployment Considerations
+#### 6. Deployment Considerations
 
 - **Containerization:** Dockerize components (stream processing, embedding generation, Milvus) for seamless deployment and scalability using Docker Compose or Kubernetes orchestration.
 - **Cloud Integration:** Leverage cloud services (AWS, Google Cloud, Azure) for elastic scaling of infrastructure based on workload demands.
 
-##### 7. Continuous Improvement
+#### 7. Continuous Improvement
 
 - **Feedback Mechanisms:** Implement feedback loops to continuously evaluate and enhance the duplicate detection model based on real-time performance metrics and user feedback.
 - **Iterative Development:** Incorporate iterative development practices to refine embedding models and fine-tune algorithms based on evolving data patterns and job posting characteristics.
 
-### Conclusion
+#### Conclusion
 
 Designing and implementing a real-time data streaming solution for duplicate job detection involves integrating stream processing, embedding generation, and similarity search components effectively. By leveraging scalable technologies, monitoring system performance, and iterating based on real-time insights, the system can achieve accurate and efficient duplicate detection in a dynamic operational environment.
