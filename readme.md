@@ -7,8 +7,18 @@ This project demonstrates a scalable approach to detect duplicate job postings u
 ### Directory Structure
 
 jobduplicates/
+├── data/ <!-- Placeholder for input data CSV file -->
+├── data_ingestion/ <!-- Service for data ingestion and preprocessing -->
+├── embeddings/ <!-- Service for embedding generation and duplicate detection -->
+├── volumes/ <!-- Directory for persistent storage (remove before bundling) -->
+├── embedEtcd.yaml <!-- Configuration file for etcd service -->
+├── cleanup.sh <!-- Script to clean up environment -->
+├── start.sh <!-- Script to start Docker services -->
+└── docker-compose.yml <!-- Docker Compose file to orchestrate services -->
+
+jobduplicates/
 │
-├── data/                   <- Placeholder for input data CSV file
+├── data/                  <!--<- Placeholder for input data CSV file
 ├── data_ingestion/         <- Service for data ingestion and preprocessing
 ├── embeddings/             <- Service for embedding generation and duplicate detection
 ├── volumes/                <- Directory for persistent storage (remove before bundling)
