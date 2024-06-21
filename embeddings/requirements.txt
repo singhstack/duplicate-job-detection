@@ -1,0 +1,14 @@
+gensim
+nltk
+beautifulsoup4
+tqdm
+pandas 
+numpy
+fastapi
+uvicorn
+python-multipart
+fastparquet
+pyarrow
+httpx
+pymilvus==2.1.3
+protobuf==3.20.*

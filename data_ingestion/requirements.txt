@@ -1,0 +1,10 @@
+gensim
+pymilvus
+nltk
+beautifulsoup4
+tqdm
+pandas 
+numpy
+fastapi
+uvicorn
+httpx
