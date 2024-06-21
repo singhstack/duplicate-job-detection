@@ -5,6 +5,7 @@
 This project demonstrates a scalable approach to detect duplicate job postings using Glove embeddings and Milvus, a high-performance vector search engine. The system is containerized using Docker for easy deployment and management.
 
 ### Directory Structure
+'''bash
 jobduplicates/
 │
 ├── data/                  <!-- Placeholder for input data CSV file -->
@@ -15,7 +16,7 @@ jobduplicates/
 ├── cleanup.sh              <!-- Script to clean up environment -->
 ├── start.sh                <!-- Script to start Docker services -->
 └── docker-compose.yml      <!-- Docker Compose file to orchestrate services -->
-
+'''
 
 
 ## Project Structure and Workflow
