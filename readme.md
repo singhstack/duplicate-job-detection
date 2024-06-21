@@ -54,7 +54,7 @@ Duplicate jobs are defined as postings sharing identical attributes in key field
 ### Prerequisites
 
 - Docker and Docker Compose installed on your machine.
-- Place your input data CSV file (`<YOUR_DATASET>.csv`) in the `data/` directory.
+- Create a 'data/' directory and place your input data CSV file (`<YOUR_DATASET>.csv`) in the `data/` directory.
 - Place your GloVe embedding text file (`glove.6B.100d.txt`) in the `embeddings/` directory.
 
 
