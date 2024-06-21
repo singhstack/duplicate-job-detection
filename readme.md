@@ -67,7 +67,7 @@ Duplicate jobs are defined as postings sharing identical attributes in key field
    cd jobduplicates
 
 2. **Run Docker compose using start.sh:**
-   '''bash
+   ```bash
    bash start.sh
 
 This will build your docker, run it and generate duplicate job pairs for you in /embeddings as 'duplicate job pairs.csv'
